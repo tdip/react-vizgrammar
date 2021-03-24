@@ -26,6 +26,9 @@ import { getDefaultColorScale } from './helper';
  * Base Chart that contain most common methods that requires for the charts.
  */
 export default class BaseChart extends React.Component {
+    state = {
+        externalData: null,
+      };
     /**
      * returns which x scale to be used for the current chart based on the metadata type.
      * @param {String} type - type defined in the metadata one of values 'linear', 'ordinal', or 'time'
@@ -104,7 +107,8 @@ export default class BaseChart extends React.Component {
         this.sortDataBasedOnConfig(this.props);
     }
 
-    componentWillReceiveProps(nextProps) {
+    getDerivedStateFromProps(nextProps) {
+        console.log(next)
         const { config } = nextProps;
 
         if (!this.chartConfig || !(_.isEqual(config, this.chartConfig)) || !this.props.append) {

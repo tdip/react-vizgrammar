@@ -67,7 +67,7 @@ export default class MapGenerator extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    static getDerivedStateFromProps(nextProps) {
         const { config } = nextProps;
 
         if (!this.chartConfig || !_.isEqual(config, this.chartConfig) || !(this.chartConfig.append === false)) {

@@ -41,7 +41,7 @@ export default class NumberCharts extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    static getDerivedStateFromProps(nextProps) {
         if (this.props.metadata !== null) {
             this._handleData(nextProps);
         }

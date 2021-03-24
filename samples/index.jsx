@@ -24,6 +24,7 @@ import LightBulbOutline from './components/LightBulbOutline';
 import { HashRouter as Router, Route, Switch as RouterSwitch } from 'react-router-dom';
 import ScrollReset from './ScrollReset';
 import App from './App';
+import Test from './test';
 import LineCharts from './chart-docs/LineChartSamples';
 import AreaCharts from './chart-docs/AreaChartSamples';
 import BarCharts from './chart-docs/BarChartSamples';
@@ -70,7 +71,7 @@ class AppRoute extends React.Component {
     render() {
         return (
             <Router>
-                <div className={this.state.theme + 'Theme'}>
+                {/*<div className={this.state.theme + 'Theme'}>
                     <ScrollReset>
                         <Route exact path={'/'} component={GettingStarted} />
                     </ScrollReset>
@@ -152,8 +153,14 @@ class AppRoute extends React.Component {
                                 )
                             }} />
                         </ScrollReset>
+                        
                     </MuiThemeProvider>
-                </div>
+                </div>*/}
+                <Route path="/test" component={() => {
+                                return (
+                                    <Test/>
+                                )
+                            }} />
             </Router>
         );
     }

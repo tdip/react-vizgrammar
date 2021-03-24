@@ -44,6 +44,7 @@ export default class InlineChart extends BaseChart {
             switch (chart.type) {
                 case 'spark-line':
                     Object.keys(chart.dataSetNames).map((dataSetName) => {
+                        
                         lineCharts.push((
                             <VictoryGroup
                                 key={`chart-${chart.id}-${chart.type}-${dataSetName}`}
@@ -64,6 +65,7 @@ export default class InlineChart extends BaseChart {
                                 />
                             </VictoryGroup>
                         ));
+                    
                         return null;
                     });
                     break;

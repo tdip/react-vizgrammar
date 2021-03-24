@@ -76,6 +76,7 @@ export default class GettingStarted extends React.Component {
                         <p style={{ marginTop: 20 }} className="lead">
                             <Button color="primary" size="lg" onClick={() => { window.location.href = 'https://github.com/wso2/react-vizgrammar'; }}>View on GitHub</Button>{' '}
                             <Link to={'/samples'} style={{ textDecoration: 'none' }}><Button color="primary" size="lg">View Samples</Button></Link>{' '}
+                            <Link to={'/test'} style={{ textDecoration: 'none' }}><Button color="primary" size="lg">View Samples</Button></Link>{' '}
                         </p>
                     </center>
                 </Jumbotron>

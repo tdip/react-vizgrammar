@@ -162,6 +162,9 @@ export default class App extends React.Component {
             [28, 50, 30, 'test1'],
             [29, 60, 30, 'test2'],
             [30, 70, 30, 'test1'],
+            [30, 70, 30, 'test1'],
+            [30, 70, 30, 'test1'],
+            [30, 70, 30, 'test1'],
         ];
 
         this.sparkAreaChart = {

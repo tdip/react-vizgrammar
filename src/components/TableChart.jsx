@@ -65,7 +65,7 @@ export default class TableChart extends BaseChart {
         return onClick && onClick(row.original);
     }
 
-    componentWillReceiveProps(nextProps) {
+    static getDerivedStateFromProps(nextProps) {
         if (!this.chartConfig || !_.isEqual(nextProps.config, this.chartConfig) || !this.props.append) {
             this.state.initialized = false;
             this.state.dataSets = [];
